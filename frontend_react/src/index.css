@@ -1,9 +1,26 @@
 body {
-  margin: 0;
+  margin: 5px;
   text-align: center;
 }
 
-/* .isOff {
+header {
+  background-color: aqua;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  display: none;
-} */
+}
+
+a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: rgb(255, 0, 119);
+}
