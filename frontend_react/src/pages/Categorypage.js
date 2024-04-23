@@ -19,12 +19,12 @@ function Categorys() {
     return(
         <>
         
-        <div>Категории{name}</div>
+        <h1>Рецепты по категории  {name}</h1>
         {recipes&&
         recipes.map(recipe => {
             if(recipe.cat.name === name){
                 return(
-                <div>
+                <div className="element">
                     <Link key={recipe.id} to={`recipe/${recipe.id}`}>
                         {recipe.title}
                     </Link>

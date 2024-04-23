@@ -24,3 +24,11 @@ class RecipeDetailView(APIView):
         serializer = RecipeDeteilSerializer(recipe)
         return Response(serializer.data)
 
+class CatDeteilView(APIView):
+
+    def get(self, request, pk):
+        recipes = Recipe.objects.filter(cat_id=pk)
+        serializer = RecipeSerializer(recipes, many=True)
+        return Response(serializer.data)
+
+

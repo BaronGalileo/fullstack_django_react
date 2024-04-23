@@ -18,18 +18,20 @@ function Home() {
 
     
     return(
-        <>
-        <h1>Дом, милый Дом!</h1>
-        {cats.map(cat => {
-            return(
-            <div>
-                <Link key={cat.id} to={`cat/${cat.name}`}>
-                    {cat.name}
-                </Link>
+        <div>
+            <h1>Категории блюд</h1>
+            <div className="conteyner">
+                {cats.map(cat => {
+                    return(
+                    <div className="element">
+                        <Link key={cat.id} to={`cat/${cat.name}`}>
+                            <h2>{cat.name}</h2>
+                        </Link>
+                    </div>
+                    )
+                })}
             </div>
-            )
-        })}
-        </>  
+        </div>  
     )
 }
 

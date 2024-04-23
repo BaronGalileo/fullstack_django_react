@@ -1,16 +1,17 @@
 import { NavLink, Outlet } from "react-router-dom";
 import React from "react";
 
+
+
 function Layout() {
     return (
         <>
         <header>
-            <NavLink to="/">Home</NavLink>
-            {/* <NavLink to="/сategorys/:id">Categorys</NavLink> */}
-            <NavLink to="/recipes/:id">Recipes</NavLink>   
+            <NavLink to="/">Категории блюд</NavLink>
+            <NavLink to="/SwaggerUI" >SwaggerUI</NavLink>  
         </header>
         <Outlet />
-        <footer>2024г</footer>
+        <footer>Версия от 23.04.2024г</footer>
       </>
     )
 }

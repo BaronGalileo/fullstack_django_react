@@ -26,3 +26,6 @@ class RecipeDeteilSerializer(serializers.ModelSerializer):
 
 
 
+
+
+

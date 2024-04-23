@@ -24,3 +24,15 @@ a:hover {
 .active {
   color: rgb(255, 0, 119);
 }
+
+.conteyner {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.element {
+  margin: 15px;
+}

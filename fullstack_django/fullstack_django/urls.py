@@ -17,16 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import re_path as url
-from backend_api.views import RecipeListView, CategoryView, RecipeDetailView
+
 from rest_framework.schemas import get_schema_view
+
+from backend_api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/recipes', RecipeListView.as_view(), name="recipes"),
     path('api/v1/recipes/<int:pk>', RecipeDetailView.as_view(), name="recipe"),
     path('api/v1/cat', CategoryView.as_view(), name="cats"),
+    path('api/v1/cat/<int:pk>', CatDeteilView.as_view(), name="cat"),
     path('openapi', get_schema_view(
-        title="Your Project",
+        title="Fullstack api",
         description="API for all things …"
     ), name='openapi-schema'),
 ]
